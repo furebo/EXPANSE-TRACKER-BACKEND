@@ -4,7 +4,6 @@ const upload = require('../utils/multer');
 const {uploadToCloudinary} = require('../middlewares/uplaodMiddleware');
 
 const {loginUser,registerUser,getUserInfo} = require("../controllers/authController");
-
 const router = express.Router();
 
 router.post('/login',loginUser);
@@ -28,4 +27,5 @@ try {
     });
 }
 })
+
 module.exports = router;
