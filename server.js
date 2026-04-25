@@ -12,10 +12,12 @@ const app = express();
 
 //Middleware to handle cors
 app.use(cors({
-    origin:process.env.CLIENT_URL || "*",
-    methods:["GET","POST","DELETE","PUT"],
+    origin:"http://localhost:5173",
+    methods:["GET","POST","DELETE","PUT","OPTIONS"],
     allowedHeaders:["Content-Type","Authorization"]
 }))
+
+app.options(/.*/, cors());
 
 app.use(express.json());
 
