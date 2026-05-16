@@ -13,6 +13,7 @@ const app = express();
 //Middleware to handle cors
 app.use(cors({
     origin:"https://venerable-treacle-48ba9b.netlify.app",
+    //origin:"http://localhost:5173",
     methods:["GET","POST","DELETE","PUT","OPTIONS"],
     allowedHeaders:["Content-Type","Authorization"]
 }))
